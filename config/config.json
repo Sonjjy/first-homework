@@ -1,0 +1,21 @@
+{
+  "redis":{
+    "key": "a1bc7242e0506fbfb7223f242b05a5a7",
+    "api_reference": "media_site+kollus",
+    "IP" : "182.252.140.143",
+    "PORT" : "6379"
+  },
+  
+  "URL" : "http://api.kr.dev.kollus.com",
+
+  "mysql":{
+    "IP" : "182.252.140.149",
+    "PORT" : "3305",
+    "id" : "kollus",
+    "pw" : "kollus",
+    "database" : "kollus_base",
+    "sqlQuery_one" : "SELECT mc.content_provider_id, cp.name as 'content_provider_name', mck.media_content_id, mc.title FROM content_providers cp join media_contents mc ON mc.content_provider_id = cp.id join media_content_keys mck on mc.id = mck.media_content_id where mck.key like '",
+    "sqlQuery_two" : "SELECT tf.profile_name, tf.profile_key, tf.content_path, tf.filesize, tf.encrypt_level FROM transcoding_files tf join media_content_keys mck on tf.media_content_id = mck.media_content_id where mck.key like '"
+  }
+      
+}
